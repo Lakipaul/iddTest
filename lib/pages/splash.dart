@@ -14,9 +14,10 @@ class _SplashState extends State<Splash> {
   @override
   void initState() {
     Future.delayed(
-      Duration(seconds: 2),
+      Duration(seconds: 5),
       () => Navigator.of(context).pushReplacement(MaterialPageRoute(
         builder: (context) => OnBoardingWidget(
+          indicator: 0,
           imagePath: "lib\\assets\\Illustration.png",
           title: "Good food at a cheap price",
           subTitle:
@@ -26,6 +27,7 @@ class _SplashState extends State<Splash> {
                 context,
                 MaterialPageRoute(
                     builder: (context) => OnBoardingWidget(
+                          indicator: 1,
                           imagePath: "lib\\assets\\Illustartion1.png",
                           title: "Select the Favorities Menu",
                           subTitle:
